@@ -1,4 +1,12 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+:root{
+    --color-white:#FFFF;
+    --color-dark1:#272727;
+    --color-dark2:#2d2d2d;
+    --color-dark3:#414141;
+    --color-dark4:#1c1c1c;
+    --color-dark5:#343434;
+    --color-purple:#b040ff;
+}
 
 *{
     margin: 0;
@@ -6,33 +14,79 @@
 }
 
 body{
-    font-family: 'Poppins', sans-serif;
-    background-color: rgb(22, 22, 22);
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: var(--color-dark1);
+    color: var(--color-white);
 }
 
-.Logo{
-    width: 42px;
-    height: 42px;
+.img_logo_header{
+    width: 45px;
     border-radius: 100px;
-    background-color: blueviolet;
-    margin: 12px;
 }
 
-header{
-    height: 10vh;
+.header,
+.navigation_header{
     display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.header{
+    background-color: var(--color-dark2);
+    box-shadow: 1px 1px 4px var(--color-dark4);
+    height: 3.5em; /*1em = 16px*/
     justify-content: space-between;
-    background-color: rgb(15, 15, 15);
-    box-shadow: 0 0 1rem black;
+    padding: 0 10%;
 }
 
-ul{
-    display: flex;
-    margin: 23px;
+.navigation_header{
+    gap: 3em;
+    z-index: 2;
 }
 
-li{
-    color: blueviolet;
-    list-style-type: none;
-    padding-left: 2rem;
+.navigation_header a{
+    text-decoration: none;
+    color: var(--color-purple);
+    font-weight: bold;
+}
+.navigation_header a:hover{
+    color: var(--color-white);
+    transition: 1s;
+}
+
+.content{
+    text-align: center;
+    padding-top: 5em;
+    height: 100vh;
+    transition: 1s;
+}
+
+.btn_icon_header{
+    background-color: transparent;
+    border: none;
+    color: var(--color-white);
+    cursor: pointer;
+    display: none;
+}
+
+@media screen and (max-width: 768px){
+    .btn_icon_header{
+        display: block;
+    }
+    .navigation_header{
+        position: absolute;
+        flex-direction: column;
+        top: 0;
+        background-color: var(--color-dark5);
+        height: 100%;
+        width: 35vw;
+        padding: 1em;
+        animation-duration: 1s;
+        margin-left: -100vw;
+    }
+}
+
+@keyframes showSideBar{
+    from {margin-left: -100vw;}
+    top {margin-left: -10vw;}
 }
