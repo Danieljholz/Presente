@@ -49,15 +49,9 @@ body{
     color: var(--color-purple);
     font-weight: bold;
 }
+
 .navigation_header a:hover{
     color: var(--color-white);
-    transition: 1s;
-}
-
-.content{
-    text-align: center;
-    padding-top: 5em;
-    height: 100vh;
     transition: 1s;
 }
 
@@ -89,4 +83,16 @@ body{
 @keyframes showSideBar{
     from {margin-left: -100vw;}
     top {margin-left: -10vw;}
+}
+
+/* CORPO */
+
+.content{
+    text-align: center;
+    height: 100vh;
+    transition: 1s;
+}
+
+.introducao{
+    padding: 1cm 0;
 }
