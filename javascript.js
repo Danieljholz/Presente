@@ -29,3 +29,44 @@ window.addEventListener('resize', function(event){
 });
 
 // CORPO
+
+class cartinhas{
+    constructor(nome, texto){
+        this.nome = nome
+        this.texto = texto
+    }
+
+    render(){
+        let div = document.createElement("div")
+        let nome = document.createElement("texto")
+        let linha = document.createElement("hr")
+        let texto = document.createElement("texto")
+
+        nome.innerHTML = this.nome
+        texto.innerHTML = this.texto
+
+        nome.setAttribute("class", "nomeCard")
+        texto.setAttribute("class", "textoCard")
+
+        div.appendChild(texto)
+        div.appendChild(linha)
+        div.appendChild(nome)
+        document.getElementById("cartinhas").appendChild(div)
+    }
+}
+
+
+var cards = []
+cards.push(new cartinhas("pedro", "blasmavmksanvosajbfwoafww"))
+cards.push(new cartinhas("pedro", "blasmavmksanvosajbfwoafww"))
+cards.push(new cartinhas("pedro", "blasmavmksanvosajbfwoafww"))
+cards.push(new cartinhas("pedro", "blasmavmksanvosajbfwoafww"))
+cards.push(new cartinhas("pedro", "blasmavmksanvosajbfwoafww"))
+
+function criaCartas() {
+    for (let i = 0; i < cards.length; i++) {
+        cards[i].render()
+    }
+} 
+
+addEventListener("load", criaCartas)
