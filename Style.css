@@ -85,6 +85,32 @@ body{
     top {margin-left: -10vw;}
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* CORPO */
 
 .content{
@@ -129,4 +155,12 @@ body{
     margin-left: -120px; 
     top: 60%; 
     margin-top: -75px;
+}
+
+/* corrigindo tamanho do video */
+video {
+    width: 100%;
+    object-fit: fill;
+    object-position: center;
+    overflow: hidden;
 }

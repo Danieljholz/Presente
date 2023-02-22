@@ -70,3 +70,6 @@ function criaCartas() {
 } 
 
 addEventListener("load", criaCartas)
+
+// autoplay
+document.getElementById('video').play();
